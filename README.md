@@ -157,6 +157,12 @@ dsh-pricing-badge/
 └── README.md
 ```
 
+## 支持作者
+
+如果这个插件帮到了你，欢迎请我喝杯咖啡 ☕
+
+- 爱发电：<https://afdian.com/u/0defb102b8a311f199a75254001e7c00>
+
 ## 许可证
 
 MIT
