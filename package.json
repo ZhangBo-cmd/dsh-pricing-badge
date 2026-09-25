@@ -1,0 +1,40 @@
+{
+  "name": "dsh-pricing-badge",
+  "version": "0.1.0",
+  "description": "DeepSeek 官方 API 高峰/空闲时段、当前模型输出价与账户余额速查（DeepSeek Harness 插件，纯工具、不调用模型）",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "pricing",
+    "billing"
+  ],
+  "license": "MIT"
+}

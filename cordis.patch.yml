@@ -1,0 +1,6 @@
+# dsh-pricing-badge 组合包补丁层：
+# 向 profile 插入一个 Loader 行，名称指向本包（node 半边是空 apply，
+# 浏览器半边经 exports["./client"] 交付）。
+- insert:
+    - id: dsh-pricing-badge
+      name: dsh-pricing-badge
