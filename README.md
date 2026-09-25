@@ -163,6 +163,11 @@ dsh-pricing-badge/
 
 - 爱发电：<https://afdian.com/u/0defb102b8a311f199a75254001e7c00>
 
+<p align="center">
+  <img src="assets/wechat.jpg" width="220" alt="微信打赏"/>
+  <img src="assets/alipay.jpg" width="220" alt="支付宝打赏"/>
+</p>
+
 ## 许可证
 
 MIT
