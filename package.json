@@ -40,5 +40,9 @@
     "pricing",
     "billing"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "funding": {
+    "type": "individual",
+    "url": "https://afdian.com/u/0defb102b8a311f199a75254001e7c00"
+  }
 }
