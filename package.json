@@ -1,6 +1,6 @@
 {
   "name": "dsh-pricing-badge",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DeepSeek 官方 API 高峰/空闲时段、当前模型输出价与账户余额速查（DeepSeek Harness 插件，纯工具、不调用模型）",
   "repository": {
     "type": "git",
