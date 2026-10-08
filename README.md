@@ -120,14 +120,14 @@ dsh plugin --profile web remove dsh-pricing-badge
 ```sh
 npm login                  # 首次需要登录 npm 账号
 npm publish --access public
-# 用户：dsh plugin add dsh-pricing-badge
+# 用户：dsh plugin --profile web add dsh-pricing-badge
 ```
 
 发布前 `npm pack` 已包含预构建的 `lib/`，安装方直接拿到产物，无需构建授权。
 
 ### 方式 2：GitHub 直接安装（源码分发）
 
-`dsh` 支持 `dsh plugin add github:you/dsh-pricing-badge`，但 git 安装拉的是源码，需要构建脚本。若想走这条路：
+`dsh` 支持 `dsh plugin --profile web add github:you/dsh-pricing-badge`，但 git 安装拉的是源码，需要构建脚本。若想走这条路：
 
 1. 给 `package.json` 增加 `"scripts": { "prepare": "node ./scripts/build.js" }`（自包含、不依赖 monorepo）。
 2. 用户首次 `add` 会被 pnpm 拦截构建，需按其提示把包键加进 profile 的 `pnpm-workspace.yaml`：
@@ -143,7 +143,7 @@ npm publish --access public
 
 ### 方式 3：直接发 tarball
 
-把 `npm pack` 得到的 `.tgz` 发给对方，对方 `dsh plugin add ./dsh-pricing-badge-0.1.0.tgz` 即可，零构建授权。
+把 `npm pack` 得到的 `.tgz` 发给对方，对方 `dsh plugin --profile web add ./dsh-pricing-badge-0.1.0.tgz` 即可，零构建授权。
 
 ### 方式 4：社区插件市场收录
 
