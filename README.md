@@ -1,5 +1,9 @@
 # dsh-pricing-badge
 
+![DeepSeek pricing capsule in the DSH status bar](pricing-badge.gif)
+
+The capsule in the status bar expands into a live price reference.
+
 DeepSeek Harness（DSH）Web UI 插件：在**输入框下方**显示一个「高峰 / 空闲」指示灯（附当前模型输出价与账户余额），点击展开「模型价格速查」——DeepSeek 官方分时段价格 + 第三方模型固定价。
 
 - **纯工具、纯前端**：不发起任何模型请求，不产生 token 费用（余额读取由服务端代取）。
