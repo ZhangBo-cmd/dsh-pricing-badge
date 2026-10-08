@@ -24,7 +24,20 @@ DeepSeek Harness（DSH）Web UI 插件：在**输入框下方**显示一个「�
 
 ---
 
-## 安装（本地 / 自己用）
+## 安装
+
+普通用户一行装好：
+
+```sh
+dsh plugin --profile web add dsh-pricing-badge
+dsh web
+```
+
+![安装过程](pricing-install.gif)
+
+---
+
+### 开发者：从本地目录 / tarball 安装
 
 本包已带预构建产物（`lib/index.js` 与 `lib/client.js`），**无需任何构建脚本**，也不会触发 pnpm 的构建授权。
 
