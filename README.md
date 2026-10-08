@@ -26,7 +26,7 @@ DeepSeek Harness（DSH）Web UI 插件：在**输入框下方**显示一个「�
 
 ## 安装
 
-普通用户一行装好：
+普通用户从 npm 装，一行就够：
 
 ```sh
 dsh plugin --profile web add dsh-pricing-badge
@@ -35,9 +35,21 @@ dsh web
 
 ![安装过程](pricing-install.gif)
 
----
+> `--profile <name>` 是**必填**。DSH 的 `plugin` 命令本质是把参数转发给 profile 目录里的 pnpm，
+> 不带会直接报 `error: required option '--profile <name>' not specified`。
+> 用默认的网页界面就是 `--profile web`，自定义 profile 换成对应名字即可。
 
-### 开发者：从本地目录 / tarball 安装
+插件随配置生效，刷新页面即可在输入框下方看到指示灯。
+
+## 验证是否装好
+
+```sh
+dsh --profile web --dump-config
+```
+
+输出中应出现以 `dsh-pricing-badge` 命名的一层（`# == dsh-pricing-badge`），并有 `name: dsh-pricing-badge` 的 Loader 行。
+
+## 开发者：从本地目录 / tarball 安装
 
 本包已带预构建产物（`lib/index.js` 与 `lib/client.js`），**无需任何构建脚本**，也不会触发 pnpm 的构建授权。
 
@@ -45,7 +57,7 @@ dsh web
 
 ```sh
 cd dsh-pricing-badge
-dsh plugin add .
+dsh plugin --profile web add .
 ```
 
 ### 方式 B：从 tarball 安装（推荐，可分发给别人）
@@ -53,36 +65,14 @@ dsh plugin add .
 ```sh
 cd dsh-pricing-badge
 pnpm pack   # 或 npm pack，生成 dsh-pricing-badge-0.1.0.tgz
-dsh plugin add ./dsh-pricing-badge-0.1.0.tgz
+dsh plugin --profile web add ./dsh-pricing-badge-0.1.0.tgz
 ```
 
-安装完成后启动：
+## 卸载
 
 ```sh
-dsh web
+dsh plugin --profile web remove dsh-pricing-badge
 ```
-
-> 若安装时新建了 profile，则用对应 profile 启动：`dsh --profile <name> web`。
-> 插件随配置生效，刷新页面即可在输入框下方看到指示灯。
-
-### 卸载
-
-```sh
-dsh plugin remove dsh-pricing-badge
-```
-
----
-
-## 验证是否装好
-
-```sh
-dsh --dump-config
-```
-
-输出中应出现以 `dsh-pricing-badge` 命名的一层（`# == dsh-pricing-badge`），并有 `name: dsh-pricing-badge` 的 Loader 行。
-
----
-
 ## 自定义
 
 ### 改价格
